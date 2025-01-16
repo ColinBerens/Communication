@@ -1,3 +1,7 @@
+:root {
+  --primary-color: rgb(202, 192, 192);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +10,7 @@
   
   body {
     font-family: Arial, sans-serif;
+    background-color: black; 
   }
   
   .navbar {
@@ -34,46 +39,43 @@
   
   .nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
     transition: color 0.3s;
   }
   
   .nav-links a:hover {
     color: #00bcd4;
   }
-  
-  /* Hamburger menu (hidden by default) */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+
+  .aboutMe button {
+    color: black;
+    font-family: poppins;
+    font-size: 200%;
+    margin-top: 1%;
+    margin-left: 15%; /* Moves the entire button to the right */
   }
-  
-  .hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
+  .aboutMe h1 {
+    font-size: 400%;
+    padding-left: 15%;
+    font-family: poppins;
+    font-weight: 400;
+    padding-top: 15%;
+    color: var(--primary-color);
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      width: 200px;
-      border-radius: 8px;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
+  .aboutMe p {
+    padding-left: 15%;
+    padding-top: 1%;
+    font-family: poppins;
+    font-size: 200%;
+    color: var(--primary-color);
+  }
+  .side {
+    display: flex;
+    gap: 2rem;
+  }
+  .side img {
+
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /
   }
