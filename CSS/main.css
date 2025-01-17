@@ -12,6 +12,7 @@
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #222222; /* Fallback color */
   background-color: var(--black-color);
 }
 
@@ -40,9 +41,14 @@ body {
   font-weight: 400;
   font-size: 32px;
   word-spacing: -10%;
-  padding-left: 350px;
+  padding-left: 40%;
+  white-space: nowrap;
   color: var(--black-color);
   text-decoration: none;
+  transition: color 0.3s;
+}
+.logo a:hover{
+  color: var(--primary-color);
 }
 
 .nav-links {
@@ -51,6 +57,7 @@ body {
   gap: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 550;
+  padding-left: 30%;
 }
 
 .nav-links li {
@@ -65,11 +72,11 @@ body {
 }
 
 .nav-links a:hover {
-  color: #00bcd4;
+  color: var(--primary-color);
 }
 
 .aboutMe {
-  margin-top: 3%;
+  margin-top: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +103,7 @@ body {
   padding: 1% 2%;
   border: none;
   align-self: flex-start; /* Aligns the button with the start of the text */
+  cursor: pointer;
 }
 
 .aboutMe h1 {
