@@ -1,5 +1,7 @@
 :root {
-  --primary-color: rgb(202, 192, 192);
+  --primary-color: #6fcb9f;
+  --black-color: #282828;
+  --white-color: #E3E3E3;
 }
 
 * {
@@ -21,10 +23,17 @@
     background-color: #333;
     color: white;
   }
+
+  .press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
   
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
   .nav-links {
