@@ -1,90 +1,119 @@
 :root {
   --primary-color: #6fcb9f;
-  --black-color: #282828;
+  --black-color: #222222;
   --white-color: #E3E3E3;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: black; 
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .press-start-2p-regular {
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .logo {
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li {
-    display: inline;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #00bcd4;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--black-color);
+}
 
-  .aboutMe button {
-    color: black;
-    font-family: poppins;
-    font-size: 200%;
-    margin-top: 1%;
-    margin-left: 15%; /* Moves the entire button to the right */
-  }
-  .aboutMe h1 {
-    font-size: 400%;
-    padding-left: 15%;
-    font-family: poppins;
-    font-weight: 400;
-    padding-top: 15%;
-    color: var(--primary-color);
-  }
-  .aboutMe p {
-    padding-left: 15%;
-    padding-top: 1%;
-    font-family: poppins;
-    font-size: 200%;
-    color: var(--primary-color);
-  }
-  .side {
-    display: flex;
-    gap: 2rem;
-  }
-  .side img {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  z-index: 1000; 
+}
 
-    width: 200px;
-    height: 200px;
-    object-fit: cover; /
-  }
+.press-start-2p-regular {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo a {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-size: 32px;
+  word-spacing: -10%;
+  padding-left: 350px;
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 130%;
+  color: var(--black-color);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+.aboutMe {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.side {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aboutMe button {
+  color: var(--black-color);
+  background-color: var(--primary-color);
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 200%;
+  padding: 1% 2%;
+  border: none;
+  align-self: flex-start; /* Aligns the button with the start of the text */
+}
+
+.aboutMe h1 {
+  font-size: 400%;
+  font-family: "Press Start 2P", sans-serif;
+  word-spacing: -30%;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.aboutMe p {
+  font-family: "Poppins", sans-serif;
+  font-size: 200%;
+  color: var(--primary-color);
+}
+
+.side img {
+  width: 100%; /* Set a fixed width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+}
