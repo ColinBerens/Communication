@@ -1,7 +1,7 @@
 :root {
   --primary-color: #6fcb9f;
-  --black-color: #222222;
-  --white-color: #E3E3E3;
+  --black-color: #161616;
+  --white-color: #eeeeee;
 }
 
 * {
@@ -41,7 +41,7 @@ body {
   font-family: "Press Start 2P", serif;
   font-weight: 400;
   font-size: 32px;
-  word-spacing: -10%;
+  word-spacing: -30%;
   padding-left: 40%;
   white-space: nowrap;
   color: var(--black-color);
@@ -105,13 +105,12 @@ body {
   background-position: center; /* Center the image within the button */
   font-family: "Press Start 2P", sans-serif;
   font-size: 200%;
-  padding: 4% 2%;
+  padding: 3% 2%;
   padding-left: 5%;
   border: none;
   align-self: flex-start; /* Aligns the button with the start of the text */
   cursor: pointer;
   width: 80%; /* Adjust width to match the image's dimensions */
-  height: 30%; /* Adjust height to match the image's dimensions */
   text-align: center; /* Center the text inside the button */
   transition: background-image 1s ease-in-out;
   transition: margin-left 0.3s ease-in-out;
@@ -119,7 +118,8 @@ body {
 .aboutMe button:hover{
   background-image: url('../IMAGES/ButtonOnHover.png'); /* Add your PNG image */
   margin-left: 1%;
-
+  outline: 2px solid #ffffff; /* White outline */
+  outline-offset: 2px;
 }
 
 .aboutMe h1 {
@@ -184,5 +184,23 @@ body {
   height: auto;
   object-fit: cover;
 }
+.MantaSeas{
+  padding-top: 4%;
+  color: var(--white-color);
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.MantaSeas-text-content{
 
+}
+.MantaSeas img{
+  width: 60%; /* Adjust as needed for balance */
+  height: auto;
+  object-fit: cover;
+}
+.SeeMoreButton button{
+  text-align: center; /* Center the text inside the button */
+  align-self: center;
+}
 
