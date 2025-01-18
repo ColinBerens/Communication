@@ -88,9 +88,15 @@
       <p>colin.berens@hotmail.com</p>
     </div>
     <div class="SendEmail">
-      <label for="singleLineInput">Enter your name:</label>
-      <input type="text" id="singleLineInput" class="text-input" placeholder="Type here...">
-      <button id="SendEmail">SendEmail</button>
+      <form action="sendEmail.php" method="POST">
+        <label for="singleLineInput">Enter your name:</label>
+        <input type="text" id="singleLineInput" name="name" class="text-input" placeholder="Type here..." required>
+        <label for="emailInput">Enter your email:</label>
+        <input type="email" id="emailInput" name="email" class="text-input" placeholder="Your email..." required>
+        <label for="messageInput">Your message:</label>
+        <textarea id="messageInput" name="message" class="text-input" placeholder="Write your message..." required></textarea>
+        <button type="submit">Send Email</button>
+      </form>
     </div>
   </div>
   <div class="BottomText">
