@@ -29,4 +29,17 @@ function loadNavbar() {
       .then(data => {
           document.getElementById('navbar').innerHTML = data;
       });
-    }
+}
+function displayOutcomeMessage() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const success = urlParams.get('success');
+  const outcomeLabel = document.getElementById('outcome');
+
+  if (success === '1') {
+      outcomeLabel.textContent = "Your message has been sent successfully!";
+      outcomeLabel.style.color = "green";
+  } else if (success === '0') {
+      outcomeLabel.textContent = "There was an error sending your message. Please try again.";
+      outcomeLabel.style.color = "red";
+  }
+  }

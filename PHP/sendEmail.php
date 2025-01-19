@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mail($to, $subject, $body, $headers)) {
         // Redirect back to the main page with a success message
         header('Location: ../index.html?success=1');
+        
         exit;
     } else {
         // Redirect back to the main page with an error message
