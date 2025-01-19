@@ -14,20 +14,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="CSS\navbar.css"> 
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">BERENS Colin</a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="aboutMe.html">About Me</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <button id="LightMode">LightMode</button>
-    </ul>
-  </nav>
-
+  <body onload="loadNavbar()">
+    <div id="navbar"></div> <!-- This is where the navbar will be inserted -->
   <div class="aboutMe">
     <div class="side">
         <div class="text-content">
@@ -44,9 +35,10 @@
         <div class="Slother-text-content">
           <h2>My first gamejam: Slother</h2>
           <h3>Description</h3>
-          <p>Are you mad too when humans destroy our nature? If so slother is the perfect for you...</p>
+          <p>Are you mad too when humans destroy our nature? If so slother is the perfect for you to take revenge with the other animals in the forest. In slother your goal is to save your tree from the illegal lumbers. You can command the other animals, such as snakes, rabits, crocodiles and skunks. Also you can hinder the illegal lumbers more by placing logs in their way to make their way harder. <br>
+            <b>The forest awaits you for your rescue.</b></p>
           <h3>Keyfeatures</h3>
-          <p>The keyfeature is that you can design your own map...</p>
+          <p>The keyfeature is that you can design your own map by using the logs and stones so the game plays different each time. It is also necessary to do that.</p>
           <h3>Experience with the GameJam</h3>
           <p>This gamejam was my first gamejam. It was hosted by my school and you had to make a group of 3 people. The biggest challenge was that we had to split up the tasks to work efficiently. My task was the coding for the tower shooting, the pixel art and animation. After a while we noticed that we clearly overscoped our project. Our solusion was to make scrap some ideas and focus on the raw core mechanics. In the end it is impressive what we managed to achieve in just 2 days. </p>
           <h3>Teammembers</h3>
@@ -86,15 +78,17 @@
       <li><a href="https://www.linkedin.com/in/colin-berens-1144942ba/">Colin Berens</a></li>
       <h3>Email Address</h3>
       <p>colin.berens@hotmail.com</p>
+      <h3>GitHub</h3>
+      <li><a href="https://github.com/ColinBerens">Colin Berens</a></li>
     </div>
     <div class="SendEmail">
-      <form action="sendEmail.php" method="POST">
+      <form action="PHP/sendEmail.php" method="POST">
         <label for="singleLineInput">Enter your name:</label>
-        <input type="text" id="singleLineInput" name="name" class="text-input" placeholder="Type here..." required>
+        <input type="name" id="singleLineInput" name="name" class="text-input" placeholder="Type here..." required>
         <label for="emailInput">Enter your email:</label>
         <input type="email" id="emailInput" name="email" class="text-input" placeholder="Your email..." required>
         <label for="messageInput">Your message:</label>
-        <textarea id="messageInput" name="message" class="text-input" placeholder="Write your message..." required></textarea>
+        <textarea id="message" name="message" class="text-input" placeholder="Write your message..." required></textarea>
         <button type="submit">Send Email</button>
       </form>
     </div>

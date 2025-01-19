@@ -23,3 +23,10 @@ lightModeButton.addEventListener('click', function() {
 sendEmailButton.addEventListener('click', function(){
 
 });
+function loadNavbar() {
+  fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      });
+    }
