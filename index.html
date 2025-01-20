@@ -14,10 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="CSS\navbar.css"> 
 </head>
 <body>
-  <body onload="loadNavbar()">
+  <body onload="initPage()">
     <div id="navbar"></div> <!-- This is where the navbar will be inserted -->
   <div class="aboutMe">
     <div class="side">
@@ -49,7 +48,7 @@
           <p>This gamejam was my first gamejam. It was hosted by my school and you had to make a group of 3 people. The biggest challenge was that we had to split up the tasks to work efficiently. My task was the coding for the tower shooting, the pixel art and animation. After a while we noticed that we clearly overscoped our project. Our solusion was to make scrap some ideas and focus on the raw core mechanics. In the end it is impressive what we managed to achieve in just 2 days. </p>
           <h3>Teammembers</h3>
           <li><a href="https://immanuelclaerhout.com/"><i class="fas fa-external-link-alt"></i><b> Immanuel Claerhout</b></a></li>
-          <li><a href="https://www.linkedin.com/in/emiliano-dichter-8805b5269/"><i class="fas fa-external-link-alt"></i><b> Emmiliano Dichter</b></a></li>
+          <li><a href="https://www.emilianodichter.com/ "><i class="fas fa-external-link-alt"></i><b> Emmiliano Dichter</b></a></li>
           <h3 id="DownloadText">Visit Download Page</h3>
           <li><a href="https://moonipuss.itch.io/slother"><i class="fas fa-external-link-alt"></i><b> Go To Itch.Io</b></a></li>
         </div>
@@ -76,91 +75,8 @@
       <button id="seemorebutton">See More</button>
     </div>
   </div>
-  <div class="ContactPage">
-    <h1>Contact</h1>
-    <p id="LetsConnect">Let’s Connect!<br>If you’d like to collaborate, chat, or just say hi, feel free to reach out!</p>
-    <div class="contact">
-    <div class="SocialMedia">
-      <h2>Social Medias</h2>
-      <div class="Instagram">
-        <img src="IMAGES\logos\insta.png" alt="instalogo">
-        <div class="Instagram-content">
-          <h3>Instagram</h3>
-          <p>PLACE HOLDER!!!!!</p>
-        </div>
-      </div>
-      <div class="LinkedIn">
-        <img src="IMAGES\logos\linkedin.png" alt="linkedinlogo">
-        <div class="LinkedIn-content">
-          <h3>LinkedIn</h3>
-          <li><a href="https://www.linkedin.com/in/colin-berens-1144942ba/"><i class="fas fa-external-link-alt"></i> Colin Berens</a></li>
-        </div>
-      </div>
-      <div class="Email">
-        <img src="IMAGES\logos\email.png" alt="emaillogo">
-        <div class="Email-content">
-          <h3>Email Address</h3>
-          <p>colin.berens@hotmail.com</p>
-        </div>
-      </div>
-      <div class="github">
-        <img src="IMAGES\logos\github.png" alt="githubimage">
-        <div class="github-content">
-          <h3>GitHub</h3>
-          <li><a href="https://github.com/ColinBerens"><i class="fas fa-external-link-alt"></i> Colin Berens</a></li>
-        </div>
-      </div>
-    </div>
-    <div class="SendEmail">
-      <h2>Contact Form</h2>
-      <form action="PHP/sendEmail.php" method="POST">
-        <label for="singleLineInput">Enter your name:</label> <br>
-        <input type="name" id="singleLineInput" name="name" class="text-input" placeholder="Type here..." required><br>
-        <label for="emailInput">Enter your email:</label><br>
-        <input type="email" id="emailInput" name="email" class="text-input" placeholder="Your email..." required><br>
-        <label for="messageInput">Your message:</label><br>
-        <textarea id="message" name="message" class="text-input" placeholder="Write your message..." required></textarea><br>
-        <button type="submit">Send Email</button><br>
-        <label for="outcome" id="outcome"></label><br>
-      </form>
-    </div>
-  </div>
-  </div>
-<div class="footer"><footer>
-  <div class="footer-container">
-      <div class="footer-content">
-          <nav class="footer-nav">
-              <a href="about.html">About Me</a>
-              <a href="work.html">Work</a>
-              <a href="contact.html">Contact</a><br>
-              <a href="DOWNLOAD/BERENS_COLIN_CV_RESUME.pdf" download="COLIN BERENS CV.pdf" class="download-button">
-                <i class="fas fa-download"></i>Curriculum Vitae
-              </a>
-              <a href="DOWNLOAD/BERENS_COLIN_CV_RESUME.pdf" download="COLIN BERENS Motivation Letter.pdf" class="download-button">
-                <i class="fas fa-download"></i>Motivation Letter NOFILEEEEEEE!!!!
-              </a>
-          </nav>
-          <div class="social-links">
-            <a href="https://www.instagram.com/yourprofile" target="_blank">
-              <img src="IMAGES/logos/insta.png" alt="instalogo">
-            </a>
-            <a href="https://www.linkedin.com/in/colin-berens-1144942ba/" target="_blank">
-              <img src="IMAGES/logos/linkedin.png" alt="linkedinlogo">
-            </a>
-            <a href="https://github.com/ColinBerens" target="_blank">
-              <img src="IMAGES/logos/github.png" alt="githubimage">
-            </a>
-            <a href="https://sketchfab.com/ColinBerens" target="_blank">
-              <img src="IMAGES/logos/sketchfab.png" alt="sketchfabimage">
-            </a>
-            </div>
-          </div>
-      </div>
-  </div>
-  <hr class="custom-hr">
-  <div class="footer-bottom">
-      <p>© 2025 Colin Berens. All rights reserved.</p>
-  </div>
+  <div id="contactform"></div>
+  <div id="footer"></div>
 </footer></div>
 <script src="JavaScript/main.js"></script>
 

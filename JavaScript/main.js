@@ -23,11 +23,30 @@ lightModeButton.addEventListener('click', function() {
 sendEmailButton.addEventListener('click', function(){
 
 });
+function initPage() {
+  loadNavbar();
+  loadFooter();
+  loadContactForm();
+}
 function loadNavbar() {
   fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
           document.getElementById('navbar').innerHTML = data;
+      });
+}
+function loadFooter() {
+  fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer').innerHTML = data;
+      });
+}
+function loadContactForm() {
+  fetch('contactform.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('contactform').innerHTML = data;
       });
 }
 function displayOutcomeMessage() {
