@@ -27,6 +27,7 @@ function initPage() {
   loadNavbar();
   loadFooter();
   loadContactForm();
+  loadOwnGames();
 }
 function loadNavbar() {
   fetch('navbar.html')
@@ -47,6 +48,13 @@ function loadContactForm() {
       .then(response => response.text())
       .then(data => {
           document.getElementById('contactform').innerHTML = data;
+      });
+}
+function loadOwnGames() {
+  fetch('owngames.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('owngames').innerHTML = data;
       });
 }
 function displayOutcomeMessage() {

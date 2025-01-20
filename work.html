@@ -13,45 +13,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="CSS\navbar.css"> 
+  <link rel="stylesheet" href="CSS\main.css"> 
+  <link rel="stylesheet" href="CSS\work.css"> 
 </head>
 <body>
-  <body onload="loadNavbar()">
+  <body onload="initPage()">
     <div id="navbar"></div> <!-- This is where the navbar will be inserted -->
     <div class="Work">
-        <h1> My works</h1>
-        <div class="slother">
-          <div class="Slother-text-content">
-            <h2>My first gamejam: Slother</h2>
-            <h3>Description</h3>
-            <p>Are you mad too when humans destroy our nature? If so slother is the perfect for you...</p>
-            <h3>Keyfeatures</h3>
-            <p>The keyfeature is that you can design your own map...</p>
-            <h3>Experience with the GameJam</h3>
-            <p>This gamejam was my first gamejam. It was hosted by my school and you had to make a group of 3 people. The biggest challenge was that we had to split up the tasks to work efficiently. My task was the coding for the tower shooting, the pixel art and animation. After a while we noticed that we clearly overscoped our project. Our solusion was to make scrap some ideas and focus on the raw core mechanics. In the end it is impressive what we managed to achieve in just 2 days. </p>
-            <h3>Teammembers</h3>
-            <li><a href="https://immanuelclaerhout.com/"><i class="fas fa-external-link-alt"></i>Immanuel Claerhout</a></li>
-            <li><a href="https://www.linkedin.com/in/emiliano-dichter-8805b5269/"><i class="fas fa-external-link-alt"></i>Emmiliano Dichter</a></li>
-            <h3>Visit Download Page</h3>
-            <li><a href="https://moonipuss.itch.io/slother"><i class="fas fa-external-link-alt"></i> Go To Itch.Io</a></li>
-          </div>
-          <img src="IMAGES\SnH+uH.png" alt="slother">
-      </div>
-      <div class="MantaSeas">
-        <img src="IMAGES/manaz.png" alt="mantaseas">
-        <div class="MantaSeas-text-content">
-          <h2> My first small game: Manta Seas</h2>
-          <h3>Description</h3>
-          <p> Would you like finding treasure. In Manta Seas that exactly happens to you. But oh no the the treasure chest is locked. Now you have to get the key without dying from the hostile animals.<br></p>
-        <h3>Keyfeatures</h3>
-        <p>The game is a short prototype to an interesting gameconcept I came across. I added my own twist on the game. I made it take place in the water. And added new enemies to it that make an actual challenge and really fast paced.</p>
-        <h3>Original Game</h3>
-        <li><a href="https://shafox.itch.io/avoid-tetris"><i class="fas fa-external-link-alt"></i> Avoid-Tetris</a></li>
-        <h3>My Game</h3>
-        <li><a href="https://shafox.itch.io/avoid-tetris"><i class="fas fa-external-link-alt"></i> Go To Itch.Io</a></li>
-        </div>
-          <div class="3D projects">
+          <div id="owngames"></div>
+          <div class="ThreeDprojects">
           <h2> My 3D projects</h2>
+          <div class="all3Dprojects">
           <h3> Small Farm Diorama</h3>
           <p>That is my second Diorama. I put alot of effort in trying to make a story to this scene. It's not a bland showcase of things put into a scene. Alot of stuff tells a story. I think that is most important.</p>
           <h3> Artisan's Desk</h3>
@@ -60,15 +32,16 @@
           <p>My Robuddy is my first attempt on doing PBR textures and animations.</p>
           <h3> Moustache Kart</h3>
           <p>The moustache kart my next attempt with PBR textures and animations.</p>
+          </div>
         </div>
-        <div class="2DConcepts">
+        <div class="twoDConcepts">
         <h2> 2D Concepts</h2>
         <h3> Solar Punk House Concept</h3>
         <p>The Solarpunk house concept is an house I designed with an game idea in mind. It shows a fictional solarpunk world with a secret hidden in the ground. My building reflects that two sided world.</p>
         <img src="IMAGES\SolarPunkConcept\Final.png" alt="Solarpunk">
         </div>
       </div>
-
+<div id="footer"></div>
 <script src="JavaScript/main.js"></script>
 
 </body>

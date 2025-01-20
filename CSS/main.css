@@ -83,7 +83,6 @@ body {
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
 }
-
 .Work{
   padding-top: 5%;
   font-family: "Poppins", sans-serif;
@@ -103,160 +102,6 @@ body {
   font-size: 2rem;
 
 }
-
-.slother {
-  padding-top: 4%;
-  color: var(--white-color);
-  align-items: flex-start; /* Aligns items to the top */
-}
-.slother h2
-{
-  letter-spacing: -5%;
-  font-size: 4rem;
-  padding-bottom: 2.5rem;
-}
-.slotherAboutGame {
-  display: flex;
-  gap: 6.25rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  background-color: var(--second-color); /* Replace with your image path */
-  background-size: 100rem 70rem;
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-}
-.slotherAboutGame-text h3 {
-  color: var(--black-color);
-  padding-left: 2rem;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: -3%;
-
-}
-
-.slotherAboutGame-text p {
-  color: var(--black-color);
-  padding-left: 2rem;
-  padding-top: 1.25rem;
-  line-height: 1.75rem;
-  margin-top: 0;
-  letter-spacing: 3%;
-
-}
-
-.slotherAboutGame img {
-  width: 60%; /* Smaller size */
-  height: auto; /* Maintain aspect ratio */
-  image-rendering: crisp-edges;
-  padding-right: 2.75rem;
-}
-.SlotherSpecifics{
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-bottom: 2rem;
-  display: flex;
-  gap: 2rem;
-  color: var(--white-color);
-  background-color: var(--black-color); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-}
-.SlotherSpecifics img {
-  width: 55%; /* Adjust as needed for balance */
-  height: 2%;
-  padding-right: 2.75rem;
-
-}
-.Slother-text-content {
-  flex: 1; /* Allow text to take up available space */
-}
-.Slother-text-content h2{
-  padding-bottom: 2.5rem;
-  letter-spacing: -3%;
-}
-.Slother-text-content h3{
-  letter-spacing: -5%;
-}
-.Slother-text-content p{
-  padding-top: 1.25rem;
-  padding-bottom: 2.5rem;
-  line-height: 1.75rem;
-  letter-spacing: 3%;
-}
-.Slother-text-content li{
-  padding-bottom: 0.25rem;
-  font-family: "Poppins", sans-serif;
-  color: var(--second-color);
-}
-.Slother-text-content li a {
-  color: var(--second-color);
-  text-decoration: none; /* Remove underline if desired */
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-}
-
-.Slother-text-content li a:hover {
-  color: var(--white-color); /* Change color on hover for effect */
-  text-decoration: underline; /* Add underline on hover if desired */
-}
-#DownloadText{
-  padding-top: 1.25rem;
-}
-
-
-
-.MantaSeas{
-  padding-top: 4rem;
-  color: var(--white-color);
-  gap: 2rem;
-}
-.MantaSeas h2{
-  padding-bottom: 2.5rem;
-  letter-spacing: -3%;
-  font-size: 4rem;
-}
-.MantaSeas-content{
-  display: flex;
-  background-color: var(--second-color);
-  color: var(--black-color);
-  gap: 2rem;
-  align-items: flex-start;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-}
-.MantaSeas-text-content h3{
-  letter-spacing: -3%;
-}
-.MantaSeas-text-content p{
-  padding-top: 1.25rem;
-  padding-bottom: 2.5rem;
-  line-height: 1.75rem;
-  letter-spacing: 3%;
-  padding-right: 2rem;
-}
-.MantaSeas img{
-  width: 100%; /* Adjust as needed for balance */
-  height: auto;
-  padding-left: 2rem;
-  object-fit: cover;
-}
-.MantaSeas-text-content li{
-  padding-top: 0.25rem;
-  padding-bottom: 1.25rem;
-  color: var(--primary-color);
-}
-.MantaSeas-text-content li a {
-  color: var(--primary-color);
-  text-decoration: none; /* Remove underline if desired */
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-}
-.MantaSeas-text-content li a:hover {
-  color: var(--black-color); /* Change color on hover for effect */
-  text-decoration: underline; /* Add underline on hover if desired */
-}
-
-
-
-
 .SeeMoreButton {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -291,6 +136,7 @@ body {
   margin-top: 0.25rem;
   padding: 1.25rem 2.25rem; 
 }
+
 
 
 

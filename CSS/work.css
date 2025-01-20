@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #6fcb9f;
+    --black-color: #161616;
+    --white-color: #eeeeee;
+    --second-color: #ffe28a;
+  }
+.ThreeDprojects h2{
+ margin-top: 4rem;
+ font-size: 4rem;
+ letter-spacing: -3%;
+}
+.ThreeDprojects h3{
+    font-size: 2rem;
+    margin-top: 2.5rem;
+}
+.ThreeDprojects p{
+    margin-top: 0.75rem;
+}
+.all3Dprojects{
+    background-color: var(--black-color);
+}
+.twoDConcepts h2{
+    margin-top: 4rem;
+    font-size: 4rem;
+    letter-spacing: -3%;
+}
+.twoDConcepts h3{
+    font-size: 2rem;
+    margin-top: 2.5rem;
+}
+.twoDConcepts p{
+    margin-top: 0.75rem;
+}
