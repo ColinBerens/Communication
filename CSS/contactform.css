@@ -1,3 +1,6 @@
+*{
+  image-rendering: optimizeSpeed;
+}
 .ContactPage{
     padding-top: 5%;
     font-family: "Poppins", sans-serif;
