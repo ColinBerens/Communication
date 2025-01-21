@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #6fcb9f;
+    --black-color: #161616;
+    --white-color: #8b8b8b;
+    --second-color: #ffe28a;
+    --gray-color: #cecece;
+  }
+.content{
+    margin-top: 10rem;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+.AboutMe{
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+}
+.AboutMe-content p{
+    font-size: 150%;
+    line-height: 2.5rem;
+}
+.AboutMe-content h1{
+    font-size: 250%;
+    font-family: "Press Start 2P", sans-serif;
+    padding-bottom: 2.5rem;
+    letter-spacing: -3%;
+}
+.AboutMe img{
+    width: 20%;
+    height: auto;
+}
+.interests{
+    background-image: url('../IMAGES/Background1.png') ;
+    color: var(--gray-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+}
+.interests h2{
+    font-size: 230%;
+    font-family: "Press Start 2P", sans-serif;
+    padding-bottom: 2.5rem;
+    letter-spacing: -3%;
+}
+.interests p{
+    font-size: 130%;
+    line-height: 2.5rem;
+}

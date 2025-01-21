@@ -13,7 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="CSS\main.css"> 
   <link rel="stylesheet" href="CSS\work.css"> 
 </head>
 <body>
@@ -24,23 +23,54 @@
           <div class="ThreeDprojects">
           <h2> My 3D projects</h2>
           <div class="all3Dprojects">
-          <h3> Small Farm Diorama</h3>
-          <p>That is my second Diorama. I put alot of effort in trying to make a story to this scene. It's not a bland showcase of things put into a scene. Alot of stuff tells a story. I think that is most important.</p>
-          <h3> Artisan's Desk</h3>
-          <p>The Artisan's desk is a showcase of my attempt in stylising stuff with a handpainted touch. I think for my first attempt the outcome was very good</p>
-          <h3> Robuddy</h3>
-          <p>My Robuddy is my first attempt on doing PBR textures and animations.</p>
-          <h3> Moustache Kart</h3>
-          <p>The moustache kart my next attempt with PBR textures and animations.</p>
+            <div class="smallfarm">
+              <div class="smallfarm-text">
+                <h3> Small Farm Diorama</h3>
+                <p>That is my second Diorama. I put alot of effort in trying to make a story to this scene. It's not a bland showcase of things put into a scene. Alot of stuff tells a story. I think that is most important.</p>
+              </div>          
+              <img src="IMAGES\Portfolio\3d1.png" alt="3d1">
+            </div>
+            <div class="Artisan">
+              <div class="Artisan-text">
+                <h3> Artisan's Desk</h3>
+                <p>The Artisan's desk is a showcase of my attempt in stylising stuff with a handpainted touch. I think for my first attempt the outcome was very good</p>
+              </div>
+              <img src="IMAGES\Portfolio\gameart1.png" alt="gameart1">
+            </div>
+            <div class="Robuddy">
+              <div class="Robuddy-text">
+                <h3> Robuddy</h3>
+                <p>My Robuddy is my first attempt on doing PBR textures and animations.</p>
+              </div>
+              <div class="Robuddy-content">
+                <img src="IMAGES\Portfolio\2IGP13_E_Berens_Colin_robuddy_Thumbnail.png" alt="robuddy">
+                <video controls>
+                  <source src="IMAGES\Portfolio\robudy video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+            <div class="MoustacheKart">
+              <h3> Moustache Kart</h3>
+              <p>The moustache kart my next attempt with PBR textures and animations.</p>
+            </div>
           </div>
         </div>
         <div class="twoDConcepts">
         <h2> 2D Concepts</h2>
-        <h3> Solar Punk House Concept</h3>
-        <p>The Solarpunk house concept is an house I designed with an game idea in mind. It shows a fictional solarpunk world with a secret hidden in the ground. My building reflects that two sided world.</p>
-        <img src="IMAGES\SolarPunkConcept\Final.png" alt="Solarpunk">
+        <div class="twoDConcepts-content">
+          <div class="solarpunk">
+            <div class="solarpunk-content">
+              <h3> Solar Punk House Concept</h3>
+              <p>The Solarpunk house concept is an house I designed with an game idea in mind. It shows a fictional solarpunk world with a secret hidden in the ground. My building reflects that two sided world.</p>
+            </div>
+            <button onclick= Change(-1)><</button>
+            <img id="solarpunkimage" src="IMAGES\SolarPunkConcept\p19.png" alt="Solarpunk">
+            <button onclick= Change(1)>></button>
+          </div>
         </div>
       </div>
+    </div>
 <div id="footer"></div>
 <script src="JavaScript/main.js"></script>
 

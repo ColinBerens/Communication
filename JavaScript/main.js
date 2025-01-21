@@ -28,6 +28,7 @@ function initPage() {
   loadFooter();
   loadContactForm();
   loadOwnGames();
+  GetAllImages();
 }
 function loadNavbar() {
   fetch('navbar.html')
@@ -70,3 +71,21 @@ function displayOutcomeMessage() {
       outcomeLabel.style.color = "red";
   }
   }
+
+function GetAllImages(){
+  let imageArray = [];
+  let numberOfImages = 19; // Assuming there are 5 images
+  
+  for (let i = 1; i <= numberOfImages; i++) {
+      imageArray.push(`IMAGES/SolarPunkConcept/p${i}.png`);
+      console.log(imageArray);
+  }
+}
+let index = 15;
+function Change(number) {
+  index += number;
+  switchImage();
+}
+  function switchImage() {
+    document.getElementById('solarpunkimage').src = imageArray[index];
+}

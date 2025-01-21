@@ -4,9 +4,13 @@
     --white-color: #eeeeee;
     --second-color: #ffe28a;
   }
+* h2{
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 4rem;
+    padding-bottom: 2.5rem;
+}
 .ThreeDprojects h2{
  margin-top: 4rem;
- font-size: 4rem;
  letter-spacing: -3%;
 }
 .ThreeDprojects h3{
@@ -18,10 +22,21 @@
 }
 .all3Dprojects{
     background-color: var(--black-color);
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    padding-bottom: 3.75rem;
+
+}
+.twoDConcepts-content{
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    padding-bottom: 3.75rem;
+
+    background-color: var(--second-color);
+    color: var(--black-color);
 }
 .twoDConcepts h2{
     margin-top: 4rem;
-    font-size: 4rem;
     letter-spacing: -3%;
 }
 .twoDConcepts h3{
@@ -30,4 +45,61 @@
 }
 .twoDConcepts p{
     margin-top: 0.75rem;
+}
+.smallfarm{
+    display: flex;
+    gap: 4rem;
+}
+.smallfarm img{
+    width: 65%;
+    height: auto;
+    padding-top: 2.5rem;
+    padding-right: 2.5rem;
+}
+.Artisan {
+    display: flex;
+    gap: 4rem;
+}
+.Artisan img{
+    width: 50%;
+    height: auto;
+    padding-top: 2.5rem;
+    padding-right: 2.5rem;
+}
+.Robuddy{
+    display: flex;
+    gap: 4rem;
+}
+.Robuddy-content img{
+    width: 30%;
+    height: auto;
+    padding-top: 2.5rem;
+}
+.Robuddy-content video{
+    width: 50%;
+    height: auto;
+    padding-top: 2.5rem;
+}
+.solarpunk{
+    display: flex;
+    gap: 4rem;
+    
+}
+.solarpunk button{
+    margin-top: 6.5rem;
+    margin-bottom: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border: none;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 200%;
+    background: none;
+}
+.solarpunk button:hover{
+    color: var(--primary-color);
+}
+.solarpunk img{
+    width: 50%;
+    height: auto;
+    padding-top: 2.5rem;
 }

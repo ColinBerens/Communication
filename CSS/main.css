@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #222222; /* Fallback color */
   background-color: var(--black-color);
 }
@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 2rem;
 }
 
 .side {
@@ -93,6 +93,7 @@ body {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: var(--white-color); 
+  margin-bottom: 2rem;
 }
 
 .Work h1 {
