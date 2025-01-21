@@ -150,7 +150,9 @@ body {
     object-fit: cover;
     margin-top: 4rem;
   }
-
+  .aboutMe{
+    margin-top: 3rem;
+  }
 }
 
 

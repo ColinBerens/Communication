@@ -28,8 +28,8 @@
 
 }
 .twoDConcepts-content{
-    padding-left: 3.75rem;
-    padding-right: 3.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-bottom: 3.75rem;
 
     background-color: var(--second-color);
@@ -68,17 +68,32 @@
 }
 .Robuddy{
     display: flex;
+}
+.Robuddy-text{
+    margin-left: 0rem;
+    margin-right: auto;
+}
+.Robuddy-content{
+    margin-right: 40rem;
+}
+.Robuddy video{
+    width: 47%;
+    height: auto;
+    padding-top: 2.5rem;
+    margin-left: auto;
+    margin-right: 2.5rem;
+}
+.MoustacheKart{
+    display: flex;
     gap: 4rem;
 }
-.Robuddy-content img{
-    width: 30%;
+.MoustacheKart img{
+    width: 39%;
     height: auto;
     padding-top: 2.5rem;
-}
-.Robuddy-content video{
-    width: 50%;
-    height: auto;
-    padding-top: 2.5rem;
+    padding-right: 2.5rem;
+    margin-left: auto;
+
 }
 .solarpunk{
     display: flex;
@@ -109,7 +124,7 @@
 }
 @media (max-width: 1000px) {
     #owngames{
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
     h2{
         font-size: 2rem;
@@ -132,10 +147,22 @@
         display: none; /* Hide the links initially */
     }
     .solarpunk-Images{
-        display: flex;
+        display: block;
+    }
+    #upbutton{
+        display: block; 
+        display: block;
+        margin: 0 auto;
+        margin-top: 2rem;
+        background-color: var(--primary-color);
+        padding-right: 8rem;
+        padding-left: 8rem;
+    }
+    #upbutton:hover{
+        background-color: var(--white-color);
     }
     .solarpunk img{
-        width: 200%;
+        width: 100%;
         height: fit-content;
     }
     .solarpunk{
