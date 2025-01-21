@@ -164,3 +164,38 @@
     max-height: 10rem;
     resize: both;
   }
+  @media (max-width: 1000px) {
+    .contact{
+      display: block;
+    }
+    .SendEmail{
+      margin-top: 2rem;
+      margin-right: 0rem;
+    }
+    textarea {
+      width: 18rem;
+      height: 8rem;
+      max-width: 18rem;
+      min-width: 10rem;
+      max-height: 10rem;
+      resize: both;
+    }
+    .SendEmail button{
+      width: 15rem;
+    }
+    .Email img{
+      width: 20%;
+    } 
+    .Instagram img{
+      width: 20%;
+
+    }
+    .LinkedIn img{
+      width: 20%;
+
+    }
+    .github img{
+      width: 20%;
+
+    }
+  }

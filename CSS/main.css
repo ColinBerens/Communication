@@ -137,7 +137,21 @@ body {
   margin-top: 0.25rem;
   padding: 1.25rem 2.25rem; 
 }
+@media (max-width: 1000px) {
+  .side {
+    margin-top: 4%;
+    display:block;
+    justify-content: center;
+    align-items: center;
+  }
+  .side img {
+    width: 100%; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    margin-top: 4rem;
+  }
 
+}
 
 
 

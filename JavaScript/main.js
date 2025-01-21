@@ -89,3 +89,9 @@ function Change(number) {
   function switchImage() {
     document.getElementById('solarpunkimage').src = imageArray[index];
 }
+
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
+

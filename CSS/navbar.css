@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
+    padding: 1.5rem 1.5rem;
     background-color: var(--white-color);
     color: var(--black-color);
     z-index: 1000; 
@@ -43,9 +43,8 @@
     display: flex;
     gap: 20px;
     font-family: "Poppins", sans-serif;
-    padding-right: 10%;
+    padding-right: 15%;
     font-weight: 550;
-    padding-left: 30%;
   }
   
   .nav-links li {
@@ -62,3 +61,56 @@
   .nav-links a:hover {
     color: var(--primary-color);
   }
+/* Toggle Button (Hamburger Icon) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: var(--black-color);
+}
+  /* Mobile Styles */
+@media (max-width: 1000px) {
+  .nav-links {
+      display: none; /* Hide the links initially */
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--white-color);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .navbar {
+      padding: 0.25rem 2rem;
+      justify-content:center;
+      gap: 10rem;
+
+  }
+
+  .logo a{
+      font-size: 20px;
+      padding-left: 0%;
+  }
+
+  .menu-toggle {
+      display:contents;
+      cursor: pointer;
+      color: var(--black-color);
+  }
+  .menu-toggle:hover{
+    color: var(--primary-color);
+  }
+
+  .nav-links a {
+      font-size: 18px;
+      padding: 10px 0;
+  }
+  .logo a {
+    font-size: 18px; /* Smaller font size for the logo on mobile */
+  }
+}
+

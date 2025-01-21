@@ -45,3 +45,9 @@
     height: 1px;
     background-color: var(--white-color);
   }
+  @media (max-width: 1000px) {
+    .footer-nav a {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  }

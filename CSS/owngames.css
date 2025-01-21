@@ -39,7 +39,7 @@
   
   .slotherAboutGame img {
     width: 60%; /* Smaller size */
-    height: auto; /* Maintain aspect ratio */
+    height: 20%; /* Maintain aspect ratio */
     image-rendering: crisp-edges;
     padding-right: 2.75rem;
   }
@@ -146,4 +146,47 @@
   .MantaSeas-text-content li a:hover {
     color: var(--black-color); /* Change color on hover for effect */
     text-decoration: underline; /* Add underline on hover if desired */
+  }
+  @media (max-width: 1000px) {
+    .slotherAboutGame{
+      display: block;
+      padding-right: 2rem;
+    }
+    .slotherAboutGame img{
+      display: block;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+    .SlotherSpecifics {
+      display: block;
+      padding-right: 2rem;
+    }
+    .SlotherSpecifics img{
+      display: block;
+      margin: 0 auto;
+      margin-top: 3rem;
+      width: 115%;
+    }
+    .MantaSeas-content{
+      display: block;
+      padding-right: 2rem;
+    }
+    .MantaSeas-content img{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 2rem;
+    };
+    .MantaSeas-text-content
+    {
+      padding-left: 2rem;
+    }
+    .MantaSeas h2{
+      font-size: 2rem;
+
+    }
+    .slother h2{
+      font-size: 2rem;
+
+    }
   }

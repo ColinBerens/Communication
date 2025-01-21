@@ -82,7 +82,7 @@
 }
 .solarpunk{
     display: flex;
-    gap: 4rem;
+    gap: 12rem;
     
 }
 .solarpunk button{
@@ -98,8 +98,49 @@
 .solarpunk button:hover{
     color: var(--primary-color);
 }
-.solarpunk img{
+.solarpunk-Images img{
     width: 50%;
     height: auto;
     padding-top: 2.5rem;
+}
+.solarpunk-Images{
+    display: flex;
+}
+@media (max-width: 1000px) {
+    #owngames{
+        margin-top: 2rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .smallfarm, .Artisan, .Robuddy, .MoustacheKart, .solarpunk{
+        display: block;
+    }
+    .smallfarm img, .Artisan img, .Robuddy img, .Robuddy video, .MoustacheKart img, .solarpunk img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .solarpunk button{
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        font-size: 150%;
+        background: none;
+        display: none; /* Hide the links initially */
+    }
+    .solarpunk-Images{
+        display: flex;
+    }
+    .solarpunk img{
+        width: 200%;
+        height: fit-content;
+    }
+    .solarpunk{
+        padding-top: 1rem;
+    }
+    .all3Dprojects{
+        padding-top: 1rem;
+    }
 }
