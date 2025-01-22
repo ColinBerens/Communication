@@ -80,9 +80,14 @@ body {
 }
 
 .side img {
-  width: 15%; /* Set a fixed width */
+  width: 30rem; /* Set a fixed width */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
+  border-color: var(--primary-color);
+  border-radius: 0.25rem;
+  outline-color: var(--primary-color);
+  outline-width: 20rem;
+  outline-offset: 3rem;
 }
 .Work{
   padding-top: 5%;

@@ -139,6 +139,7 @@ img{
 .solarpunk-Images{
     display: flex;
 }
+
 @media (max-width: 1000px) {
     #owngames{
         margin-top: 3rem;
@@ -189,3 +190,11 @@ img{
         padding-top: 1rem;
     }
 }
+@media (max-width: 1900px){
+    .solarpunk-Images img {
+      width: 38rem;
+      height: auto;
+      padding-top: 2.5rem;
+      object-fit: contain;
+    }
+  }

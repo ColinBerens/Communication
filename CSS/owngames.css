@@ -130,7 +130,7 @@
     padding-right: 2rem;
   }
   .MantaSeas img{
-    width: 100%; /* Adjust as needed for balance */
+    width: 40rem; /* Adjust as needed for balance */
     height: auto;
     object-fit: cover;
   }
