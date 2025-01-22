@@ -9,6 +9,9 @@
     font-size: 4rem;
     padding-bottom: 2.5rem;
 }
+img{
+    image-rendering: optimizeSpeed;
+}
 .Work{
     padding-bottom: 7rem;
     margin-bottom: -10rem;
