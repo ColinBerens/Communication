@@ -35,6 +35,19 @@
     height: auto;
     object-fit: contain;
 }
+.AboutMe a {
+    color: var(--black-color);
+    text-decoration: none; /* Remove underline if desired */
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+    line-height: 3.5rem;
+    font-size: 200%;
+    margin-top: 20rem;
+    font-weight: 600;
+  }
+  .AboutMe a:hover{
+    color: var(--white-color); /* Change color on hover for effect */
+    text-decoration: underline; /* Add underline on hover if desired */
+  }
 .interests{
     background-image: url('../IMAGES/Background1.png') ;
     color: var(--gray-color);

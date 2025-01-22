@@ -45,6 +45,14 @@
   .Instagram-content p{
     padding-top: 0.25rem;
   }
+  .Instagram-content li{
+    padding-top: 0.25rem;
+  }
+  .Instagram-content li a{
+    color: var(--primary-color);
+    text-decoration: none; /* Remove underline if desired */
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  }
   .LinkedIn {
     padding-top:  2.5rem;
     display: flex;

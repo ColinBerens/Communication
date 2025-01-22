@@ -116,6 +116,8 @@
     align-items: flex-start;
     padding-bottom: 2rem;
     padding-top: 2rem;
+    padding-left: 2rem;
+
   }
   .MantaSeas-text-content h3{
     letter-spacing: -3%;
@@ -130,10 +132,9 @@
   .MantaSeas img{
     width: 100%; /* Adjust as needed for balance */
     height: auto;
-    padding-left: 2rem;
     object-fit: cover;
   }
-  .MantaSeas-text-content li{
+  .MantaSeas-text-content li, .MantaSeas-text-content a{
     padding-top: 0.25rem;
     padding-bottom: 1.25rem;
     color: var(--primary-color);
@@ -179,7 +180,6 @@
     };
     .MantaSeas-text-content
     {
-      padding-left: 2rem;
     }
     .MantaSeas h2{
       font-size: 2rem;

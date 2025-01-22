@@ -87,10 +87,18 @@ function GetAllImages(){
 
 function Change(number) {
     index += number;
+    if(index >= 19)
+    {
+        index = 0
+    }
+    if(index <0)
+    {
+        index = 18
+    }
     switchImage();
 }
 
-let index = 15;
+let index = 19;
 
 function switchImage() {
     const imageElement = document.getElementById('solarpunkimage');

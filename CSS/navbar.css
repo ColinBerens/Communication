@@ -22,18 +22,21 @@
     font-weight: 400;
     font-style: normal;
   }
+  .logo{
+    margin-left: 8%;
+  }
   
   .logo a {
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-size: 32px;
     word-spacing: -30%;
-    padding-left: 40%;
     white-space: nowrap;
     color: var(--black-color);
     text-decoration: none;
     transition: color 0.3s;
   }
+
   .logo a:hover{
     color: var(--primary-color);
   }
@@ -41,9 +44,9 @@
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 4rem;
     font-family: "Poppins", sans-serif;
-    padding-right: 15%;
+    padding-right: 8%;
     font-weight: 550;
   }
   
@@ -61,6 +64,7 @@
   .nav-links a:hover {
     color: var(--primary-color);
   }
+
 /* Toggle Button (Hamburger Icon) */
 .menu-toggle {
   display: none;
@@ -87,7 +91,7 @@
   .navbar {
       padding: 1rem 2rem;
       justify-content:center;
-      gap: 10rem;
+      gap: 3rem;
 
   }
 

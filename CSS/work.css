@@ -9,6 +9,20 @@
     font-size: 4rem;
     padding-bottom: 2.5rem;
 }
+.Work{
+    padding-bottom: 7rem;
+    margin-bottom: -10rem;
+}
+.all3Dprojects a{
+    color: var(--primary-color);
+    text-decoration: none; /* Remove underline if desired */
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+    padding-right: 3.75rem;
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-top: 1rem;
+}
 .ThreeDprojects h2{
  margin-top: 4rem;
  letter-spacing: -3%;
@@ -51,7 +65,7 @@
     gap: 4rem;
 }
 .smallfarm img{
-    width: 65%;
+    width: 60rem;
     height: auto;
     padding-top: 2.5rem;
     padding-right: 2.5rem;
@@ -61,7 +75,7 @@
     gap: 4rem;
 }
 .Artisan img{
-    width: 50%;
+    width: 60rem;
     height: auto;
     padding-top: 2.5rem;
     padding-right: 2.5rem;
@@ -77,7 +91,7 @@
     margin-right: 40rem;
 }
 .Robuddy video{
-    width: 47%;
+    width: 57.5rem;
     height: auto;
     padding-top: 2.5rem;
     margin-left: auto;
@@ -88,7 +102,7 @@
     gap: 4rem;
 }
 .MoustacheKart img{
-    width: 39%;
+    width: 60rem;
     height: auto;
     padding-top: 2.5rem;
     padding-right: 2.5rem;
@@ -114,7 +128,7 @@
     color: var(--primary-color);
 }
 .solarpunk-Images img{
-    width: 50%;
+    width: 60rem;
     height: auto;
     padding-top: 2.5rem;
     object-fit: contain;
