@@ -29,8 +29,9 @@ body {
 }
 .side {
   display: flex;
-  gap: 2rem;
+  gap: 10rem;
   align-items: center;
+  justify-content: center;
 }
 
 .text-content {
@@ -79,7 +80,7 @@ body {
 }
 
 .side img {
-  width: 100%; /* Set a fixed width */
+  width: 15%; /* Set a fixed width */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
 }
