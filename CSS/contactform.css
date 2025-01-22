@@ -10,7 +10,9 @@
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     color: var(--white-color); 
+    overflow: hidden; /* Prevent overflow */
   }
+
   .ContactPage h1{
     font-family: "Press Start 2P", sans-serif;
     color: var(--primary-color);

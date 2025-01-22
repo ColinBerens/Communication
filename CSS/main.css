@@ -25,8 +25,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  overflow: hidden; /* Prevent overflow */
 }
-
 .side {
   display: flex;
   gap: 2rem;

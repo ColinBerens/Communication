@@ -11,6 +11,7 @@
     margin-right: 8%;
   }
 .AboutMe{
+    z-index: 1; /* Keep the main content above the background image */
     display: flex;
     background-color: var(--primary-color);
     color: var(--black-color);
@@ -19,7 +20,9 @@
     padding-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    position: relative
 }
+
 .AboutMe-content p{
     font-size: 150%;
     line-height: 2.5rem;
