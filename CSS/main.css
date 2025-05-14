@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #6fcb9f;
+  --primary-color: #e08367;
   --black-color: #161616;
   --white-color: #eeeeee;
   --second-color: #ffe28a;
@@ -81,7 +81,7 @@ body {
 }
 
 .WindmillVideo {
-  width: 45rem; /* Set a fixed width */
+  width: 60rem; /* Set a fixed width */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
   margin-right: 5rem;
