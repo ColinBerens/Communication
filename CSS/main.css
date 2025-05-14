@@ -20,7 +20,8 @@ body {
 }
 
 .aboutMe {
-  margin-top: 4%;
+  margin-top: 8%;
+  margin-bottom: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,9 +30,10 @@ body {
 }
 .side {
   display: flex;
-  gap: 10rem;
+  gap: 4rem;
   align-items: center;
   justify-content: center;
+  margin-left: 8rem;
 }
 
 .text-content {
@@ -79,15 +81,11 @@ body {
   color: var(--primary-color);
 }
 
-.side img {
-  width: 30rem; /* Set a fixed width */
+.WindmillVideo {
+  width: 45rem; /* Set a fixed width */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
-  border-color: var(--primary-color);
-  border-radius: 0.25rem;
-  outline-color: var(--primary-color);
-  outline-width: 20rem;
-  outline-offset: 3rem;
+  margin-right: 5rem;
 }
 .Work{
   padding-top: 5%;
