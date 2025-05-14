@@ -104,14 +104,34 @@ img{
     display: flex;
     gap: 4rem;
 }
-.MoustacheKart img{
-    width: 60rem;
+.MoustacheKart-text{
+    margin-left: 0rem;
+    margin-right: auto;
+}
+.MoustacheKart-video video{
+    width: 57.5rem;
     height: auto;
     padding-top: 2.5rem;
-    padding-right: 2.5rem;
     margin-left: auto;
-
+    margin-right: 2.5rem;
 }
+.UnityScene{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 4rem;
+}
+.UnityScene-video video{
+    width: 57.5rem;
+    height: auto;
+    padding-top: 2.5rem;
+    margin-left: auto;
+    margin-right: 2.5rem;
+}
+.UnityScene-text{
+    margin-left: 0rem;
+    margin-right: auto;
+}
+
 .solarpunk{
     display: flex;
     gap: 12rem;
