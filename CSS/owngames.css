@@ -103,7 +103,7 @@
   }
   .Fastnetic-upperbox{
     display: flex;
-    gap: 6.25rem;
+    gap: 20.25rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     background-color: var(--second-color); /* Replace with your image path */
@@ -130,7 +130,7 @@
   .Fastnetic-upperbox img {
     width:50%; /* Adjust as needed for balance */
     height: 2%;
-    padding-right: 2.75rem;
+    padding-right: 2.25rem;
   }
   .Fastnetic-lowerbox li {
     padding-bottom: 0.25rem;
