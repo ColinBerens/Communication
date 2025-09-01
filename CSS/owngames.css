@@ -160,10 +160,10 @@
     background-repeat: no-repeat; /* Prevents the image from repeating */
   }
   .Fastnetic-lowerbox img {
-    width: 55%; /* Adjust as needed for balance */
-    height: 2%;
+    width: 25%; /* Adjust as needed for balance */
+    height: 15%;
     padding-right: 2.75rem;
-  
+    image-rendering: crisp-edges;
   }
   .Fastnetic-lowerbox-text {
     flex: 1; /* Allow text to take up available space */

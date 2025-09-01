@@ -22,7 +22,7 @@ if (aboutMeButton) {
 
 if (seeMoreButton) {
   seeMoreButton.addEventListener('click', function() {
-      window.location.href = 'work.html#worksection';
+      window.location.href = 'work.html';
   });
 }
 
