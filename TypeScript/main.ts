@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', initPage);
 
-let imageArray = []; // Declare imageArray globally
+let imageArray: string[] = [];
+
 
 function initPage() {
     loadNavbar();
@@ -30,34 +31,41 @@ function loadNavbar() {
     fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('navbar').innerHTML = data;
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                navbar.innerHTML = data;
+            }
+            
         })
-        .catch(error => console.error('Error loading navbar:', error));
-}
-
+    }
 function loadFooter() {
     fetch('footer.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('footer').innerHTML = data;
+            const footer = document.getElementById('footer');
+            if (footer) {
+                footer.innerHTML = data;
+            }
         })
-        .catch(error => console.error('Error loading footer:', error));
-}
-
+    }
 function loadContactForm() {
     fetch('contactform.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('contactform').innerHTML = data;
+            const contactForm = document.getElementById('contactform');
+            if (contactForm) {
+                contactForm.innerHTML = data;
+            }
         })
-        .catch(error => console.error('Error loading contact form:', error));
-}
-
+    }
 function loadOwnGames() {
     fetch('owngames.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('owngames').innerHTML = data;
+            const ownGames = document.getElementById('owngames');
+            if (ownGames) {
+                ownGames.innerHTML = data;
+            }
         })
         .catch(error => console.error('Error loading own games:', error));
 }
@@ -85,7 +93,7 @@ function GetAllImages(){
     }
 }
 
-function Change(number) {
+function Change(number : number){
     index += number;
     if(index >= 19)
     {
@@ -100,14 +108,17 @@ function Change(number) {
 
 let index = 19;
 
-function switchImage() {
-    const imageElement = document.getElementById('solarpunkimage');
-    if (imageElement) {
-        imageElement.src = imageArray[index];
-    }
+function switchImage(): void {
+  const imageElement = document.getElementById('solarpunkimage') as HTMLImageElement | null;
+  if (imageElement) {
+    imageElement.src = imageArray[index];
+  }
 }
 
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
+
+function toggleMenu(): void {
+  const navLinks = document.querySelector('.nav-links');
+  if (navLinks) {
     navLinks.classList.toggle('show');
+  }
 }

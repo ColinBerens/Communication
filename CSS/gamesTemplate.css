@@ -1,0 +1,23 @@
+.game-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.thumbnail {
+    width: 150px;
+    height: auto;
+}
+
+.title {
+    font-weight: bold;
+    color: #ccc;
+}
+
+.description {
+    font-style: italic;
+}
+
+.year {
+    color: gray;
+}
