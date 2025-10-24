@@ -15,6 +15,40 @@ function initPage() {
 const aboutMeButton = document.getElementById('aboutMeButton');
 const seeMoreButton = document.getElementById('seemorebutton');
 
+const changeVideoButton = document.getElementById('ChangeVideo');
+const UnityVideo = document.getElementById('UnityVideo') as HTMLVideoElement | null;
+
+let UnityVideoSrc1 = "VIDEOS/Windmill_Breakdown_Colin_Berens.mp4";
+let UnityVideoSrc2 = "VIDEOS/Windmill_Final_Colin_Berens.mp4";
+
+// Initialize flag according to HTML video src
+let showingFirst = false; // false because HTML video initially uses Src2
+
+if (changeVideoButton && UnityVideo) {
+  changeVideoButton.addEventListener('click', () => {
+    // Update button text first
+    if (showingFirst) {
+      changeVideoButton.textContent = "Blockout";
+    } else {
+      changeVideoButton.textContent = "Final";
+    }
+
+    // Then switch the video
+    if (showingFirst) {
+      UnityVideo.src = UnityVideoSrc2;
+    } else {
+      UnityVideo.src = UnityVideoSrc1;
+    }
+
+    showingFirst = !showingFirst;
+    UnityVideo.play();
+  });
+}
+
+
+
+
+
 if (aboutMeButton) {
   aboutMeButton.addEventListener('click', function() {
       window.location.href = 'aboutMe.html';
@@ -122,3 +156,10 @@ function toggleMenu(): void {
     navLinks.classList.toggle('show');
   }
 }
+const preloadedImages: HTMLImageElement[] = [];
+
+imageArray.forEach((src) => {
+  const img = new Image();
+  img.src = src;
+  preloadedImages.push(img);
+});

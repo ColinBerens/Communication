@@ -115,6 +115,45 @@ img{
     margin-left: auto;
     margin-right: 2.5rem;
 }
+.MoustacheKart-video .sketchfab-embed-wrapper iframe{
+    width: 57.5rem;
+    height: 32.34rem;
+    padding-top: 2.5rem;
+    margin-left: auto;
+    margin-right: 2.5rem;
+}
+.smallfarm .sketchfab-embed-wrapper iframe{
+    width: 57.5rem;
+    height: 32.34rem;
+    padding-top: 2.5rem;
+    margin-left: auto;
+    margin-right: 2.5rem;
+}
+.UnityScene-text button {
+  color: var(--black-color);
+  background-image: url('../IMAGES/Button.png'); /* Add your PNG image */
+  background-size: cover; /* Ensure the image covers the entire button */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-position: center; /* Center the image within the button */
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 140%;
+  padding: 3% 2%;
+  padding-left: 5%;
+  border: none;
+  align-self: flex-start; /* Aligns the button with the start of the text */
+  cursor: pointer;
+  width: 80%; /* Adjust width to match the image's dimensions */
+  text-align: center; /* Center the text inside the button */
+  transition: background-image 1s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+  margin-top: 5%;
+}
+.UnityScene-text button:hover{
+  background-image: url('../IMAGES/ButtonOnHover.png'); /* Add your PNG image */
+  margin-left: 1%;
+  outline: 2px solid #ffffff; /* White outline */
+  outline-offset: 2px;
+}
 .UnityScene{
     margin-top: 2.5rem;
     display: flex;
