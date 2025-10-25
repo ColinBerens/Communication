@@ -21,15 +21,20 @@ function loadTemplate(url) {
 // Render games
 function renderGames() {
     return __awaiter(this, void 0, void 0, function* () {
-        const template = yield loadTemplate('gamesTemplate.html'); // adjust path
+        const template = yield loadTemplate('gamesCardTemplate.html'); // adjust path
         if (!template)
             return;
         const container = document.getElementById('game-list');
         if (!container)
             return;
+        const stylecontainer = document.getElementById('game-list-style');
+        if (!stylecontainer)
+            return;
+        stylecontainer.innerHTML = '<link rel="stylesheet" href="CSS/gamesCardTemplate.css">';
         const games = [
-            { thumbnail: 'IMAGES/Fastnetic.png', title: 'Fastnetic', description: 'Cool concept', year: 2025 },
-            { thumbnail: 'IMAGES/Portfolio/main_Screen.png', title: 'Two Left Jams', description: 'Fast-paced racing', year: 2025 }
+            { thumbnail: 'IMAGES/Portfolio/FastneticInGame.png', title: 'Fastnetic', description: 'Fast-Paced Platformer', year: 2025 },
+            { thumbnail: 'IMAGES/Portfolio/boom.png', title: 'Two Left Jams', description: 'Award Winning Coop Game', year: 2025 },
+            { thumbnail: 'IMAGES/SnH+uH.png', title: 'Slother', description: 'Tower-Defence Game', year: 2024 }
         ];
         games.forEach(game => {
             const clone = template.content.cloneNode(true);

@@ -1,23 +1,90 @@
-.game-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-}
-
-.thumbnail {
-    width: 150px;
-    height: auto;
-}
-
-.title {
-    font-weight: bold;
-    color: #ccc;
-}
-
-.description {
-    font-style: italic;
-}
-
-.year {
-    color: gray;
-}
+  .game-name{
+    padding-top: 4%;
+    color: var(--white-color);
+    align-items: flex-start; /* Aligns items to the top */
+  }
+  .game-name h2{
+    letter-spacing: -5%;
+    font-size: 4rem;
+    padding-bottom: 2.5rem;
+  }
+  .game-name-upperbox{
+    display: flex;
+    gap: 6.25rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: var(--second-color); /* Replace with your image path */
+    background-size: 100rem 70rem;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  .game-name-upperbox-text h3 {
+    color: var(--black-color);
+    padding-left: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -3%;
+  
+  }
+  .game-upperbox-text p {
+    color: var(--black-color);
+    padding-left: 2rem;
+    padding-top: 1.25rem;
+    line-height: 1.75rem;
+    margin-top: 0;
+    letter-spacing: 3%;
+  
+  }
+  .game-upperbox img {
+    width: 104%; /* Adjust as needed for balance */
+    height: 2%;
+    padding-right: 2.75rem;
+  }
+  .game-lowerbox li {
+    padding-bottom: 0.25rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--second-color);
+    font-size: 1.25rem;
+  }
+  .game-lowerbox li a {
+    color: var(--second-color);
+    text-decoration: none; /* Remove underline if desired */
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  }
+  .game-lowerbox li a:hover {
+    color: var(--white-color); /* Change color on hover for effect */
+    text-decoration: underline; /* Add underline on hover if desired */
+  }
+  .game-lowerbox{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+    color: var(--white-color);
+    background-color: var(--black-color); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  .game-lowerbox img {
+    width: 55%; /* Adjust as needed for balance */
+    height: 2%;
+    padding-right: 2.75rem;
+  
+  }
+  .game-lowerbox-text {
+    flex: 1; /* Allow text to take up available space */
+  }
+  .game-lowerbox-text h2{
+    padding-bottom: 2.5rem;
+    letter-spacing: -3%;
+  }
+  .game-lowerbox-text h3{
+    letter-spacing: -5%;
+  }
+  .game-lowerbox-text p{
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 3%;
+  }

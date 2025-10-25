@@ -18,15 +18,21 @@ async function loadTemplate(url: string): Promise<HTMLTemplateElement | null> {
 
 // Render games
 async function renderGames() {
-    const template = await loadTemplate('gamesTemplate.html'); // adjust path
+    const template = await loadTemplate('gamesCardTemplate.html'); // adjust path
     if (!template) return;
 
     const container = document.getElementById('game-list');
     if (!container) return;
 
+    const stylecontainer = document.getElementById('game-list-style');
+    if (!stylecontainer) return;
+  
+    stylecontainer.innerHTML = '<link rel="stylesheet" href="CSS/gamesCardTemplate.css">';
+
     const games: Game[] = [
-        { thumbnail: 'IMAGES/Fastnetic.png', title: 'Fastnetic', description: 'Cool concept', year: 2025 },
-        { thumbnail: 'IMAGES/Portfolio/main_Screen.png', title: 'Two Left Jams', description: 'Fast-paced racing', year: 2025 }
+        { thumbnail: 'IMAGES/Portfolio/FastneticInGame.png', title: 'Fastnetic', description: 'Fast-Paced Platformer', year: 2025 },
+        { thumbnail: 'IMAGES/Portfolio/boom.png', title: 'Two Left Jams', description: 'Award Winning Coop Game', year: 2025 },
+        { thumbnail: 'IMAGES/SnH+uH.png', title: 'Slother', description: 'Tower-Defence Game', year: 2024 }
     ];
 
     games.forEach(game => {
