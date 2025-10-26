@@ -11,17 +11,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // Load the template from a separate HTML file
 function loadTemplate(url) {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(url);
-        const html = yield response.text();
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = html;
-        return tempDiv.querySelector('template');
+        try {
+            const response = yield fetch(url);
+            if (!response.ok) {
+                console.error(`Failed to load template: ${url}`);
+                return null;
+            }
+            const html = yield response.text();
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            return tempDiv.querySelector('template');
+        }
+        catch (error) {
+            console.error(`Error loading template from ${url}:`, error);
+            return null;
+        }
     });
 }
 // Render games
 function renderGames() {
     return __awaiter(this, void 0, void 0, function* () {
-        const template = yield loadTemplate('gamesCardTemplate.html'); // adjust path
+        const template = yield loadTemplate('gamesCardTemplate.html');
         if (!template)
             return;
         const container = document.getElementById('game-list');
@@ -51,78 +61,154 @@ function renderGames() {
             if (year)
                 year.textContent = game.year.toString();
             const button = clone.querySelector('.game-button');
-            console.log(button);
             if (button) {
                 button.addEventListener('click', () => {
-                    console.log(`Navigating to game ID: ${game.id}`);
-                    window.location.href = `index.html?id=${game.id}`;
+                    console.log(`Loading game: ${game.id}`);
+                    loadGameDetails(game.id); // Load dynamically instead of page reload
                 });
             }
             container.appendChild(clone);
         });
     });
 }
-// Call on page load
-document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, void 0, function* () {
-    renderGames();
-    const params = new URLSearchParams(window.location.search);
-    const gameId = params.get("id");
-    if (!gameId) {
-        document.getElementById("gamesTemplate").innerHTML = "<h2>Game not found</h2>";
-        return;
-    }
-    const template = yield loadTemplate('gamesTemplate.html'); // adjust path
-    if (!template)
-        return;
-    const container = document.getElementById('game-list');
-    if (!container)
-        return;
-    try {
-        const res = yield fetch("Data/games.json");
-        const games = yield res.json(); // you can create an interface if desired
-        const game = games.find((g) => g.id === gameId);
-        if (!game) {
-            document.getElementById("gamesTemplate").innerHTML = "<h2>Game not found</h2>";
+// Load game details dynamically
+function loadGameDetails(gameId) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const gameListContainer = document.getElementById('game-list');
+        const detailsContainer = document.getElementById('gamesTemplate');
+        if (!detailsContainer) {
+            console.error('gamesTemplate container not found');
             return;
         }
-        const clone = template.content.cloneNode(true);
-        // Assign values from JSON
-        clone.getElementById("game-name").querySelector("h2").textContent = game["game-name-h2"];
-        const upperBoxText = clone.getElementById("game-upperbox-text");
-        upperBoxText.querySelector("h3").textContent = game["game-upperbox-text-h3"];
-        upperBoxText.querySelector("p").innerHTML = game["game-upperbox-text-p"];
-        const lowerBoxText = clone.getElementById("game-lowerbox-text");
-        const h3Elements = lowerBoxText.querySelectorAll("h3");
-        const pElements = lowerBoxText.querySelectorAll("p");
-        if (h3Elements[0])
-            h3Elements[0].textContent = game["game-lowerbox-text-h3"];
-        if (pElements[0])
-            pElements[0].textContent = game["game-lowerbox-text-p"];
-        if (h3Elements[1])
-            h3Elements[1].textContent = game["game-lowerbox-text-h3-02"];
-        if (pElements[1])
-            pElements[1].textContent = game["game-lowerbox-text-p-02"];
-        if (h3Elements[2])
-            h3Elements[2].textContent = game["game-lowerbox-text-h3-teammembers"];
-        if (pElements[2])
-            pElements[2].innerHTML = game["Teammembers"];
-        clone.getElementById("DownloadText").textContent = game["DownloadText"];
-        const downloadLink = clone.querySelector("a");
-        if (game["downloadlink"])
-            downloadLink.href = game["downloadlink"];
-        else
-            downloadLink.style.display = "none";
-        // Images
-        const mainImage = clone.querySelector("#game-upperbox img");
-        const gameplayImage = clone.querySelector("#game-lowerbox img");
-        if (mainImage)
-            mainImage.src = game.IMAGES["image-01"];
-        if (gameplayImage)
-            gameplayImage.src = game.IMAGES["image-02"];
-        container.appendChild(clone);
-    }
-    catch (error) {
-        console.error("Error loading game data:", error);
-        container.innerHTML = "<h2>Error loading game data</h2>";
+        try {
+            // Load game data
+            const res = yield fetch("Data/games.json");
+            if (!res.ok)
+                throw new Error('Failed to load games.json');
+            const games = yield res.json();
+            const game = games.find((g) => g.id === gameId);
+            if (!game) {
+                detailsContainer.innerHTML = "<h2>Game not found</h2>";
+                return;
+            }
+            // Load template
+            const template = yield loadTemplate('gamesTemplate.html');
+            if (!template) {
+                detailsContainer.innerHTML = "<h2>Failed to load template</h2>";
+                return;
+            }
+            const clone = template.content.cloneNode(true);
+            // Use querySelector instead of getElementById on DocumentFragment
+            const gameName = clone.querySelector("#game-name h2");
+            if (gameName)
+                gameName.textContent = game["game-name-h2"];
+            const upperBoxText = clone.querySelector("#game-upperbox-text");
+            if (upperBoxText) {
+                const h3 = upperBoxText.querySelector("h3");
+                const p = upperBoxText.querySelector("p");
+                if (h3)
+                    h3.textContent = game["game-upperbox-text-h3"];
+                if (p)
+                    p.innerHTML = game["game-upperbox-text-p"];
+            }
+            const lowerBoxText = clone.querySelector("#game-lowerbox-text");
+            if (lowerBoxText) {
+                const h3Elements = lowerBoxText.querySelectorAll("h3");
+                const pElements = lowerBoxText.querySelectorAll("p");
+                if (h3Elements[0])
+                    h3Elements[0].textContent = game["game-lowerbox-text-h3"];
+                if (pElements[0])
+                    pElements[0].textContent = game["game-lowerbox-text-p"];
+                if (h3Elements[1])
+                    h3Elements[1].textContent = game["game-lowerbox-text-h3-02"];
+                if (pElements[1])
+                    pElements[1].textContent = game["game-lowerbox-text-p-02"];
+                if (h3Elements[2])
+                    h3Elements[2].textContent = game["game-lowerbox-text-h3-teammembers"];
+                if (game["Teammembers"] != null && game["Teammembers"] != undefined) {
+                    if (pElements[2])
+                        pElements[2].innerHTML = game["Teammembers"]; // Plain text
+                }
+                else {
+                    // Hide if no team members
+                    if (h3Elements[2])
+                        h3Elements[2].style.display = "none";
+                    if (pElements[2])
+                        pElements[2].style.display = "none";
+                }
+                const downloadLinkContainer = clone.querySelector("#downloadlink");
+                if (downloadLinkContainer) {
+                    const downloadLink = downloadLinkContainer.querySelector("a");
+                    if (downloadLink && game["downloadlink"]) {
+                        downloadLink.href = game["downloadlink"];
+                    }
+                    else if (!game["downloadlink"]) {
+                        downloadLinkContainer.style.display = "none";
+                    }
+                }
+                // Additional downloads section (if exists)
+                if (game["game-lowerbox-text-h3-03"]) {
+                    if (h3Elements[3])
+                        h3Elements[3].textContent = game["game-lowerbox-text-h3-03"];
+                    if (pElements[3])
+                        pElements[3].innerHTML = game["additional-downloads"];
+                }
+                else {
+                    // Hide if no additional downloads
+                    if (h3Elements[3])
+                        h3Elements[3].style.display = "none";
+                    if (pElements[3])
+                        pElements[3].style.display = "none";
+                }
+            }
+            const downloadText = clone.querySelector("#DownloadText");
+            if (downloadText)
+                downloadText.textContent = game["DownloadText"];
+            const downloadLink = clone.querySelector("#main-download-link");
+            if (downloadLink) {
+                if (game["downloadlink"]) {
+                    downloadLink.href = game["downloadlink"];
+                }
+                else {
+                    const container = clone.querySelector("#downloadlink-container");
+                    if (container)
+                        container.style.display = "none";
+                }
+            }
+            // Images
+            const mainImage = clone.querySelector("#game-upperbox img");
+            const gameplayImage = clone.querySelector("#game-lowerbox img");
+            if (mainImage && game.IMAGES)
+                mainImage.src = game.IMAGES["image-01"];
+            if (gameplayImage && game.IMAGES)
+                gameplayImage.src = game.IMAGES["image-02"];
+            // Clear and append to correct container
+            detailsContainer.innerHTML = '';
+            detailsContainer.appendChild(clone);
+        }
+        catch (error) {
+            console.error("Error loading game data:", error);
+            detailsContainer.innerHTML = "<h2>Error loading game data</h2>";
+        }
+    });
+}
+// Optional: Add back button functionality
+function showGameList() {
+    const gameListContainer = document.getElementById('game-list');
+    const detailsContainer = document.getElementById('gamesTemplate');
+    if (gameListContainer)
+        gameListContainer.style.display = 'block';
+    if (detailsContainer)
+        detailsContainer.style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+// Call on page load
+document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, void 0, function* () {
+    yield renderGames();
+    // Check if there's a game ID in URL (for direct links)
+    const params = new URLSearchParams(window.location.search);
+    const gameId = params.get("id");
+    if (gameId) {
+        loadGameDetails(gameId);
     }
 }));

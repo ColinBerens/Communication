@@ -44,8 +44,8 @@
         "game-lowerbox-text-p": "Before making the game I got themes to make a game. For the game I made entire brainstorm process in miro with different concepts. Then I worked out 5 of the ideas on paper. After getting feedback I chose 3 concepts and made a proof of concept in Unity. I chose then the best what later became Fastnetic. I made a iterative process to refine the gameplay and the I started production",
         "game-lowerbox-text-h3-02": "Production Process",
         "game-lowerbox-text-p-02": "The game was made by using the Unity 2D engine. I used pre rendered sprites by modeling in Blender. I made simple textures in Substance Painter. Additionaly the animations are also made in Blender ",
-        "game-lowerbox-text-h3-teammembers": "Download Game Design Document",
-        "Teammembers": "<a href='example.pdf' download class='download-btn'><a href='DOWNLOADABLE/GameDesignDocument.pdf' download='GameDesignDocument.pdf' class='download-button'><i class='fas fa-download'></i><b>Download GGD</b></a>",
+        "game-lowerbox-text-h3-03": "Download Game Design Document",
+        "additional-downloads": "<a href='example.pdf' download class='download-btn'><a href='DOWNLOADABLE/GameDesignDocument.pdf' download='GameDesignDocument.pdf' class='download-button'><i class='fas fa-download'></i><b>Download GGD</b></a>",
         "DownloadText": "Visit Download Page",
         "downloadlink": "https://colinberens.itch.io/fastnetic",
         "IMAGES": {

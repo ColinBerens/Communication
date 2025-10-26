@@ -88,3 +88,28 @@
     line-height: 1.75rem;
     letter-spacing: 3%;
   }
+  .additional-downloads {
+    color: var(--second-color);
+    font-size: 1.25rem;
+  }
+  .additional-downloads a,
+.download-button {
+    color: var(--second-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.additional-downloads a:visited,
+.download-button:visited {
+    color: var(--second-color); /* Prevent purple visited color */
+}
+
+.additional-downloads a:hover,
+.download-button:hover {
+    color: var(--white-color); /* Or whatever hover color you want */
+    text-decoration: underline;
+}
+  .Teammembers {
+  color: var(--second-color);
+  font-size: 1.25rem;
+}
