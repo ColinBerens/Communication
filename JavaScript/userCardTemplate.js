@@ -27,10 +27,19 @@ function renderGames() {
         const container = document.getElementById('game-list');
         if (!container)
             return;
+        const template2 = yield loadTemplate('gamesTemplate.html');
+        if (!template2)
+            return;
+        const container2 = document.getElementById('gamesTemplate');
+        if (!container2) {
+            console.log("fucked");
+            console.log(container2);
+            return;
+        }
         const stylecontainer = document.getElementById('game-list-style');
         if (!stylecontainer)
             return;
-        stylecontainer.innerHTML = '<link rel="stylesheet" href="CSS/gamesCardTemplate.css">';
+        stylecontainer.innerHTML = '<link rel="stylesheet" href="CSS/gamesCardTemplate.css"> \n <link rel="stylesheet" href="CSS/gamesTemplate.css">';
         const games = [
             { thumbnail: 'IMAGES/Portfolio/FastneticInGame.png', title: 'Fastnetic', description: 'Fast-Paced Platformer', year: 2025 },
             { thumbnail: 'IMAGES/Portfolio/boom.png', title: 'Two Left Jams', description: 'Award Winning Coop Game', year: 2025 },
@@ -52,6 +61,7 @@ function renderGames() {
                 year.textContent = game.year.toString();
             container.appendChild(clone);
         });
+        container2.appendChild(template2.content.cloneNode(true));
     });
 }
 // Call on page load

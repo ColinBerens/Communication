@@ -103,12 +103,17 @@ function displayOutcomeMessage() {
         }
     }
 }
+let imagesLoaded = false;
 function GetAllImages() {
-    let numberOfImages = 19;
+    if (imagesLoaded)
+        return;
+    imagesLoaded = true;
+    imageArray = [];
+    const numberOfImages = 19;
     for (let i = 1; i <= numberOfImages; i++) {
         imageArray.push(`IMAGES/SolarPunkConcept/p${i}.png`);
-        console.log(imageArray);
     }
+    console.log("Loaded images:", imageArray);
 }
 function Change(number) {
     index += number;

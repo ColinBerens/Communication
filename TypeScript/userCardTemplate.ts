@@ -20,14 +20,22 @@ async function loadTemplate(url: string): Promise<HTMLTemplateElement | null> {
 async function renderGames() {
     const template = await loadTemplate('gamesCardTemplate.html'); // adjust path
     if (!template) return;
-
     const container = document.getElementById('game-list');
     if (!container) return;
+
+    const template2 = await loadTemplate('gamesTemplate.html');
+    if (!template2) return;
+    const container2 = document.getElementById('gamesTemplate');
+    if (!container2){
+        console.log("fucked") 
+        console.log(container2)
+        return;
+    }
 
     const stylecontainer = document.getElementById('game-list-style');
     if (!stylecontainer) return;
   
-    stylecontainer.innerHTML = '<link rel="stylesheet" href="CSS/gamesCardTemplate.css">';
+    stylecontainer.innerHTML = '<link rel="stylesheet" href="CSS/gamesCardTemplate.css"> \n <link rel="stylesheet" href="CSS/gamesTemplate.css">';
 
     const games: Game[] = [
         { thumbnail: 'IMAGES/Portfolio/FastneticInGame.png', title: 'Fastnetic', description: 'Fast-Paced Platformer', year: 2025 },
@@ -50,6 +58,7 @@ async function renderGames() {
 
         container.appendChild(clone);
     });
+    container2.appendChild(template2.content.cloneNode(true) as DocumentFragment);
 }
 
 // Call on page load
