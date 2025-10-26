@@ -45,10 +45,6 @@ if (changeVideoButton && UnityVideo) {
   });
 }
 
-
-
-
-
 if (aboutMeButton) {
   aboutMeButton.addEventListener('click', function() {
       window.location.href = 'aboutMe.html';
