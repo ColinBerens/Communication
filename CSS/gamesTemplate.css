@@ -3,6 +3,11 @@
     color: var(--white-color);
     align-items: flex-start; /* Aligns items to the top */
   }
+  p{
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    letter-spacing: 3%;
+  }
   .game-name h2{
     letter-spacing: -5%;
     font-size: 4rem;

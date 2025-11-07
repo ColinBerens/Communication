@@ -18,6 +18,11 @@ body{
 
 
 }
+  p{
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    letter-spacing: 3%;
+  }
 .game-button:focus {
     border: 0.25rem solid var(--primary-color);
 }

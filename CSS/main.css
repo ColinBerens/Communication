@@ -5,6 +5,11 @@
   --second-color: #ffe28a;
   --socialMediaPictures-size : 12%;
 }
+  p{
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    letter-spacing: 3%;
+  }
 
 * {
   margin: 0;
