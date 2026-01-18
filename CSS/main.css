@@ -3,24 +3,23 @@
   --black-color: #161616;
   --white-color: #eeeeee;
   --second-color: #ffe28a;
-  --socialMediaPictures-size : 12%;
+  --socialMediaPictures-size: 12%;
 }
-  p{
-    font-size: 1.15rem;
-    line-height: 1.75rem;
-    letter-spacing: 3%;
-  }
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+  letter-spacing: 3%;
+}
 
 * {
   margin: 0;
   padding: 0;
-  
   box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #222222; /* Fallback color */
   background-color: var(--black-color);
 }
 
@@ -31,8 +30,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  overflow: hidden; /* Prevent overflow */
+  overflow: hidden;
 }
+
 .side {
   display: flex;
   gap: 4rem;
@@ -49,26 +49,26 @@ body {
 
 .aboutMe button {
   color: var(--black-color);
-  background-image: url('../IMAGES/Button.png'); /* Add your PNG image */
-  background-size: cover; /* Ensure the image covers the entire button */
-  background-repeat: no-repeat; /* Prevent repeating the image */
-  background-position: center; /* Center the image within the button */
+  background-image: url("../IMAGES/Button.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   font-family: "Press Start 2P", sans-serif;
   font-size: 200%;
   padding: 3% 2%;
   padding-left: 5%;
   border: none;
-  align-self: flex-start; /* Aligns the button with the start of the text */
+  align-self: flex-start;
   cursor: pointer;
-  width: 80%; /* Adjust width to match the image's dimensions */
-  text-align: center; /* Center the text inside the button */
-  transition: background-image 1s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
+  width: 80%;
+  text-align: center;
+  transition: background-image 1s ease-in-out, margin-left 0.3s ease-in-out;
 }
-.aboutMe button:hover{
-  background-image: url('../IMAGES/ButtonOnHover.png'); /* Add your PNG image */
+
+.aboutMe button:hover {
+  background-image: url("../IMAGES/ButtonOnHover.png");
   margin-left: 1%;
-  outline: 2px solid #ffffff; /* White outline */
+  outline: 2px solid #ffffff;
   outline-offset: 2px;
 }
 
@@ -87,21 +87,23 @@ body {
 }
 
 .WindmillVideo {
-  width: 60rem; /* Set a fixed width */
-  height: auto; /* Maintain aspect ratio */
+  width: 60rem;
+  max-width: 100%;     /* ensure it scales on small screens [web:9] */
+  height: auto;        /* keep aspect ratio [web:9] */
   object-fit: cover;
   margin-right: 5rem;
 }
-.Work{
+
+.Work {
   padding-top: 5%;
   font-family: "Poppins", sans-serif;
   padding-left: 8%;
   padding-right: 8%;
-  background-image: url('../IMAGES/Background1.png'); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  color: var(--white-color); 
+  background-image: url("../IMAGES/Background1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white-color);
   margin-bottom: 2rem;
 }
 
@@ -110,84 +112,83 @@ body {
   color: var(--primary-color);
   letter-spacing: -5%;
   font-size: 2rem;
-
 }
+
 .SeeMoreButton {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;    /* Center vertically */
-  padding-top: 6.25rem;          /* Full viewport height or adjust as needed */
+  justify-content: center;
+  align-items: center;
+  padding-top: 6.25rem;
   padding-bottom: 3.75rem;
 }
 
 .SeeMoreButton button {
-  margin-top: 0;           /* Reset the margin to ensure proper centering */
-  padding: 1rem 2rem; 
+  margin-top: 0;
+  padding: 1rem 2rem;
   font-family: "Press Start 2P", sans-serif;
   font-size: 2rem;
   color: var(--black-color);
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
   letter-spacing: -10%;
-  background-image: url('../IMAGES/Button3.png'); /* Add your PNG image */
-  background-size: cover; /* Ensure the image covers the entire button */
-  background-repeat: no-repeat; /* Prevent repeating the image */
-  background-position: center; /* Center the image within the button */
-  transition: background-image 1s ease-in-out;
-  transition: margin-top 0.3s ease-in-out;
-
+  background-image: url("../IMAGES/Button3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 1s ease-in-out, margin-top 0.3s ease-in-out;
 }
 
 .SeeMoreButton button:hover {
-  background-image: url('../IMAGES/Button3Hover.png'); /* Add your PNG image */
-  outline: 2px solid #ffffff; /* White outline */
+  background-image: url("../IMAGES/Button3Hover.png");
+  outline: 2px solid #ffffff;
   outline-offset: 2px;
   margin-top: 0.25rem;
-  padding: 1.25rem 2.25rem; 
+  padding: 1.25rem 2.25rem;
 }
+
+/* PHONE / SMALL SCREEN */
 @media (max-width: 1000px) {
-  .side {
-    margin-top: 4%;
-    display:block;
-    justify-content: center;
-    align-items: center;
-  }
-.aboutMe h1 {
-  font-size: 300%;
-    align-items: center;
-    text-align: center;
-  }
-.text-content {
-  margin-left: 0rem;
-}
-.aboutMe button {
-  font-size: 150%;
-  padding: 3% 2%;
-  padding-left: 5%;
-  border: none;
-  cursor: pointer;
-  width: 30%; /* Adjust width to match the image's dimensions */
-  height: 10%;
-  text-align: center; /* Center the text inside the button */
-  transition: background-image 1s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
-}
-.aboutMe p {
-  font-size: 150%;
-      align-items: center;
-    text-align: center;
-}
-  .side img {
-    width: 100%; /* Set a fixed width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
-    margin-top: 4rem;
-  }
-  .aboutMe{
+  .aboutMe {
     margin-top: 3rem;
   }
+
+  .side {
+    margin-top: 4%;
+    display: block;
+    text-align: center;          /* center inline content */
+  }
+
+  .text-content {
+    margin-left: 0;
+    align-items: center;         /* center flex children horizontally [web:2] */
+  }
+
+  .aboutMe h1 {
+    font-size: 300%;
+    text-align: center;
+  }
+
+  .aboutMe p {
+    font-size: 150%;
+    text-align: center;
+  }
+
+  .aboutMe button {
+    align-self: center;          /* center button in column */
+    font-size: 150%;
+    padding: 3% 2%;
+    padding-left: 5%;
+    width: 60%;                  /* bigger but still proportional */
+    height: auto;
+  }
+
+  .side img,
+  .WindmillVideo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 4rem auto 0;
+    display: block;
+  }
 }
-
-
-

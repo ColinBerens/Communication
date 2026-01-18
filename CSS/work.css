@@ -126,6 +126,8 @@ img{
     padding-top: 2.5rem;
     margin-left: auto;
     margin-right: 2.5rem;
+    align-items: right;
+
 }
 .smallfarm .sketchfab-embed-wrapper iframe{
     width: 57.5rem;
@@ -133,13 +135,18 @@ img{
     padding-top: 2.5rem;
     margin-left: auto;
     margin-right: 2.5rem;
+    align-items: right;
+
 }
+
 .Artisan .sketchfab-embed-wrapper iframe{
     width: 57.5rem;
     height: 32.34rem;
     padding-top: 2.5rem;
     margin-left: auto;
     margin-right: 2.5rem;
+    align-items: right;
+
 }
 .UnityScene-text button {
   color: var(--black-color);
@@ -176,6 +183,7 @@ img{
     padding-top: 2.5rem;
     margin-left: auto;
     margin-right: 2.5rem;
+    align-items: right;
 }
 .UnityScene-text{
     margin-left: 0rem;
